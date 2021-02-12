@@ -1,9 +1,12 @@
 import React from 'react';
 
+import GlobalStyle from './styles/global';
+
 const App = () => {
   return (
     <div className="App">
-      HELLO DASHBOARD!
+      <GlobalStyle />
+      <p>Hello Style</p>
     </div>
   );
 }
