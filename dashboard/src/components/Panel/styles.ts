@@ -16,8 +16,13 @@ export const Container = styled.div`
     font-size: 25px;
     line-height: 26px;
 
-    margin-top: 10px;
+    margin: 20px 10px;
 
     color: #333333;
   }
+`;
+
+export const GridPanel = styled.div`
+  display: grid;
+  
 `;
