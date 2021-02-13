@@ -8,19 +8,19 @@ const Menu :React.FC = () => {
     <StyledMenu>
       <ul>
         <li>
-          <img src={GraphIcon} />
+          <img src={GraphIcon} alt='GraphIcon'/>
           <StyledSpan> Painel de Controle </StyledSpan>
         </li>
         <li>
-          <img src={GraphIcon} />
+          <img src={GraphIcon} alt='GraphIcon'/>
           <StyledSpan> Painel de Controle </StyledSpan>
         </li>
         <li>
-          <img src={GraphIcon} />
+          <img src={GraphIcon} alt='GraphIcon'/>
           <StyledSpan> Painel de Controle </StyledSpan>
         </li>
         <li>
-          <img src={GraphIcon} />
+          <img src={GraphIcon} alt='GraphIcon'/>
           <StyledSpan> Painel de Controle </StyledSpan>
         </li>
       </ul>

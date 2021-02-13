@@ -11,4 +11,10 @@ export default createGlobalStyle`
     background: #FAFAFA;
     font-family: Poppins;
   }
+
+  .App {
+    display: flex;
+    flex-direction: row;
+  }
+
 `;
