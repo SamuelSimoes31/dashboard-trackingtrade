@@ -24,5 +24,43 @@ export const Container = styled.div`
 
 export const GridPanel = styled.div`
   display: grid;
+
+  /* grid-template: 
+    "hist       hist        plan-vision"  1fr
+    "insp       plan-day    plan-updt"    1fr
+    "insp-sche  insp-sche   plan-updt"    1fr
+    / minmax(320px, 1fr)       minmax(320px, 1fr)         minmax(320px, 1fr);
+  gap: 15px; */
   
+  grid-template: 
+    "hist       hist        plan-vision"  1fr
+    "insp       plan-day    plan-updt"    1fr
+    "insp-sche  insp-sche   plan-updt"    1fr
+    / 320px       320px         320px;
+  gap: 15px;
+  justify-content: center;
+
+  div:nth-child(1){
+    grid-area: hist;
+  }
+
+  &:nth-child(2){
+    grid-area: plan-vision;
+  }
+
+  div:nth-child(3){
+    grid-area: insp;
+  }
+
+  div:nth-child(4){
+    grid-area: plan-day;
+  }
+
+  div:nth-child(5){
+    grid-area: plan-updt;
+  }
+
+  div:nth-child(6){
+    grid-area: insp-sche;
+  }
 `;

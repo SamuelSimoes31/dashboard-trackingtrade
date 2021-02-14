@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: inline-block;
   position: relative;
-  width: 279px;
+  min-width: 279px;
   height: 100vh;
   margin: 0;
 `;
