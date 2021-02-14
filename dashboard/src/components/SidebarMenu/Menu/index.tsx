@@ -11,18 +11,6 @@ const Menu :React.FC = () => {
           <img src={GraphIcon} alt='GraphIcon'/>
           <StyledSpan> Painel de Controle </StyledSpan>
         </li>
-        <li>
-          <img src={GraphIcon} alt='GraphIcon'/>
-          <StyledSpan> Painel de Controle </StyledSpan>
-        </li>
-        <li>
-          <img src={GraphIcon} alt='GraphIcon'/>
-          <StyledSpan> Painel de Controle </StyledSpan>
-        </li>
-        <li>
-          <img src={GraphIcon} alt='GraphIcon'/>
-          <StyledSpan> Painel de Controle </StyledSpan>
-        </li>
       </ul>
     </StyledMenu>
   );

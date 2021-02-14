@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledMenu = styled.div`
-  position: absolute;
+  position: fixed;
   left: 51px;
   width: 228px;
   height:100vh;

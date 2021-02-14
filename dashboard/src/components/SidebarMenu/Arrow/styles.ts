@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledArrow = styled.div`
-  position: absolute;
+  position: fixed;
   left: 272px;
   top: 78px;
 

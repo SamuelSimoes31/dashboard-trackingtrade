@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Bar = styled.nav`
-  position: absolute;
+  position: fixed;
   width: 51px;
   height: 100vh;
   left: 0px;
