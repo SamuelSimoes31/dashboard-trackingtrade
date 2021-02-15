@@ -24,65 +24,58 @@ export const Container = styled.div`
 
 export const GridPanel = styled.div`
   display: grid;
-
-  /* grid-template: 
-    "hist       hist        plan-vision"  1fr
-    "insp       plan-day    plan-updt"    1fr
-    "insp-sche  insp-sche   plan-updt"    1fr
-    / 320px       320px         320px;
-  gap: 15px;
-  justify-content: center; */
-
+  justify-content: center;
   grid-template: 
-    "hist       hist        plan-vision"  1fr
-    "insp       plan-day    plan-updt"    1fr
-    "insp-sche  insp-sche   plan-updt"    1fr
-    / minmax(320px, 1fr)       minmax(320px, 1fr)         minmax(320px, 1fr);
+    "hist       hist          plan-vision" 270px
+    "insp       plan-day      plan-updt"   270px
+    "insp-sche  insp-sche     plan-updt"   270px
+    / minmax(320px, 1fr) minmax(320px, 1fr) minmax(320px, 1fr);
+
   gap: 15px;
 
 
   @media(max-width: 1325px) {
     grid-template: 
-    "hist       plan-vision"  1fr
-    "insp       plan-day"     1fr
-    "plan-updt  plan-updt"    1fr
-    "insp-sche  insp-sche"    1fr
+    "hist       plan-vision" 270px
+    "insp       plan-day"    270px
+    "plan-updt  plan-updt"   270px
+    "insp-sche  insp-sche"   270px
     / minmax(320px, 1fr)       minmax(320px, 1fr);
   }
 
   @media(max-width: 990px) {
     grid-template: 
-    "hist"  1fr
-    "plan-vision"  1fr
-    "insp"  1fr
-    "plan-day"  1fr
-    "plan-updt"  1fr
-    "plan-updt"  1fr
-    "insp-sche"  1fr
+    "hist"        270px
+    "plan-vision" 270px
+    "insp"        270px
+    "plan-day"    270px
+    "plan-updt"   270px
+    "plan-updt"   270px
+    "insp-sche"   270px
     / minmax(320px, 1fr);
   }
 
-  div:nth-child(1){
+  .CardContainer:nth-child(1){
     grid-area: hist;
   }
 
-  &:nth-child(2){
+  .CardContainer:nth-child(2){
     grid-area: plan-vision;
   }
 
-  div:nth-child(3){
+  .CardContainer:nth-child(3){
     grid-area: insp;
   }
 
-  div:nth-child(4){
+  .CardContainer:nth-child(4){
     grid-area: plan-day;
   }
 
-  div:nth-child(5){
+  .CardContainer:nth-child(5){
     grid-area: plan-updt;
   }
 
-  div:nth-child(6){
+  .CardContainer:nth-child(6){
     grid-area: insp-sche;
   }
 `;

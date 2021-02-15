@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
-  /* max-width: 354px; */
-  height: 270px;
-
+  
   background: #FFFFFF;
   border: 0.5px solid #E4E4E4;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
