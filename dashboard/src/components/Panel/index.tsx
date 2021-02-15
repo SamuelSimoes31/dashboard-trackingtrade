@@ -2,6 +2,8 @@ import React from 'react';
 import Card from './Card';
 
 import { Container, GridPanel } from './styles';
+import BarGraph from './Graphs/BarGraph';
+import { historyData } from '../../utils/data';
 
 const Panel: React.FC = () => {
   return (
@@ -9,7 +11,11 @@ const Panel: React.FC = () => {
       <h1>Painel de Controle</h1>
       <GridPanel>
         <Card title={"Histórico de eventos"} >
-          {}
+          <BarGraph 
+            data={historyData.data}
+            keys={historyData.keys}
+            index={historyData.index}
+          />
         </Card>
         <Card title={"Planos de ação"} subtitle={"visão geral"}>
           {}

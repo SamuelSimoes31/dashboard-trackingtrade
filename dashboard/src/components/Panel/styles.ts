@@ -29,16 +29,17 @@ export const GridPanel = styled.div`
     "hist       hist        plan-vision"  1fr
     "insp       plan-day    plan-updt"    1fr
     "insp-sche  insp-sche   plan-updt"    1fr
-    / minmax(320px, 1fr)       minmax(320px, 1fr)         minmax(320px, 1fr);
-  gap: 15px; */
+    / 320px       320px         320px;
+  gap: 15px;
+  justify-content: center; */
 
   grid-template: 
     "hist       hist        plan-vision"  1fr
     "insp       plan-day    plan-updt"    1fr
     "insp-sche  insp-sche   plan-updt"    1fr
-    / 320px       320px         320px;
+    / minmax(320px, 1fr)       minmax(320px, 1fr)         minmax(320px, 1fr);
   gap: 15px;
-  justify-content: center;
+
 
   @media(max-width: 1325px) {
     grid-template: 
@@ -46,7 +47,7 @@ export const GridPanel = styled.div`
     "insp       plan-day"     1fr
     "plan-updt  plan-updt"    1fr
     "insp-sche  insp-sche"    1fr
-    / 320px       320px;
+    / minmax(320px, 1fr)       minmax(320px, 1fr);
   }
 
   @media(max-width: 990px) {
@@ -58,7 +59,7 @@ export const GridPanel = styled.div`
     "plan-updt"  1fr
     "plan-updt"  1fr
     "insp-sche"  1fr
-    / 320px;
+    / minmax(320px, 1fr);
   }
 
   div:nth-child(1){
