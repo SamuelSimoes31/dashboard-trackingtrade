@@ -9,6 +9,12 @@ export const Container = styled.div`
   border-radius: 5px;
 
   padding: 14px;
+
+  img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 `;
 
 export const Title = styled.p`

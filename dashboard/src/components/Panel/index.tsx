@@ -11,14 +11,14 @@ const Panel = () => {
     <Container>
       <h1>Painel de Controle</h1>
       <GridPanel>
-        <Card title={"Histórico de eventos"} >
+        <Card title={"Histórico de eventos"} settings>
           <BarGraph 
             data={historyData.data}
             keys={historyData.keys}
             index={historyData.index}
           />
         </Card>
-        <Card title={"Planos de ação"} subtitle={"visão geral"}>
+        <Card title={"Planos de ação"} subtitle={"visão geral"} settings>
           <PieGraph 
             data={actionPlanData.data}
             id={actionPlanData.id}
@@ -26,21 +26,21 @@ const Panel = () => {
             eneableLegend={false}
           />
         </Card>
-        <Card title={"Inspeções"} subtitle={"status do dia"}>
+        <Card title={"Inspeções"} subtitle={"status do dia"} settings>
           <PieGraph 
             data={inspectionData.data}
             id={inspectionData.id}
             value={inspectionData.value}
           />
         </Card>
-        <Card title={"Plano de ação"} subtitle={"status do dia"}>
+        <Card title={"Plano de ação"} subtitle={"status do dia"} settings>
           <PieGraph 
               data={actionPlanData.data}
               id={actionPlanData.id}
               value={actionPlanData.value}
           />
         </Card>
-        <Card title={"Planos de ação"} subtitle={"atualizações"}>
+        <Card title={"Planos de ação"} subtitle={"atualizações"} settings>
           {}
         </Card>
         <Card title={"Inpeções Agendadas"} >
