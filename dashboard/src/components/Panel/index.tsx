@@ -3,7 +3,8 @@ import Card from './Card';
 
 import { Container, GridPanel } from './styles';
 import BarGraph from './Graphs/BarGraph';
-import { historyData } from '../../utils/data';
+import { historyData, inspectionData } from '../../utils/data';
+import PieGraph from './Graphs/PieGraph';
 
 const Panel: React.FC = () => {
   return (
@@ -21,7 +22,11 @@ const Panel: React.FC = () => {
           {}
         </Card>
         <Card title={"Inspeções"} subtitle={"status do dia"}>
-          {}
+          <PieGraph 
+            data={inspectionData.data}
+            id={inspectionData.id}
+            value={inspectionData.value}
+          />
         </Card>
         <Card title={"Plano de ação"} subtitle={"status do dia"}>
           {}

@@ -39,3 +39,22 @@ export const historyData = {
   index: "day",
   keys: ["Inspeções realizadas","Planos de ação criados"]
 }
+
+export const inspectionData = {
+  data: [
+    {
+      "id": "Realizados",
+      "value": 0.586,
+    },
+    {
+      "id": "Em aberto",
+      "value": 0.349
+    },
+    {
+      "id": "Não Realizados",
+      "value": 0.065
+    }
+  ],
+  id: "id",
+  value: "value"
+}
