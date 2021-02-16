@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  settings?: boolean;
+  filter?: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   position: relative;
   
   background: #FFFFFF;
@@ -15,6 +20,30 @@ export const Container = styled.div`
     top: 10px;
     right: 10px;
   }
+
+  select {
+    position: absolute;
+    width: 40%;
+    height: 28px;
+    top: 10px;
+    right: 40px;
+
+    background: #C4C4C4;
+    border-radius: 100px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #333333;
+
+    padding: 0 10px;
+    outline: none;
+    border: none;
+  }
+
 `;
 
 export const Title = styled.p`

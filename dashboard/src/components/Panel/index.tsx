@@ -11,7 +11,11 @@ const Panel = () => {
     <Container>
       <h1>Painel de Controle</h1>
       <GridPanel>
-        <Card title={"Histórico de eventos"} settings>
+        <Card 
+          title={"Histórico de eventos"} 
+          settings
+          filter={['Diário','Mensal']}
+        >
           <BarGraph 
             data={historyData.data}
             keys={historyData.keys}
@@ -40,10 +44,10 @@ const Panel = () => {
               value={actionPlanData.value}
           />
         </Card>
-        <Card title={"Planos de ação"} subtitle={"atualizações"} settings>
+        <Card title={"Planos de ação"} subtitle={"atualizações"} settings filter={['Pendente','Realizado']}>
           {}
         </Card>
-        <Card title={"Inpeções Agendadas"} >
+        <Card title={"Inpeções Agendadas"} filter={['Diário','Mensal']} >
           {}
         </Card>
       </GridPanel>
