@@ -2,13 +2,13 @@ import React from 'react';
 import { ResponsiveBar } from '@nivo/bar'
 // import { Container } from './styles';
 
-interface Props {
+interface BarGraphProps {
   data: object[];
   keys: string[];
   index: string;
 }
 
-const BarGraph: React.FC<Props> = ({data,keys,index}) => (
+const BarGraph = ({data,keys,index}:BarGraphProps) => (
   <ResponsiveBar
     data={data}
     keys={keys}

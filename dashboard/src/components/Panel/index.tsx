@@ -6,7 +6,7 @@ import BarGraph from './Graphs/BarGraph';
 import { historyData, inspectionData, actionPlanData } from '../../utils/data';
 import PieGraph from './Graphs/PieGraph';
 
-const Panel: React.FC = () => {
+const Panel = () => {
   return (
     <Container>
       <h1>Painel de Controle</h1>

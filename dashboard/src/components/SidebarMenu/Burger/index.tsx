@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StyledBurger } from './styles';
 
-const Burger :React.FC = () => {
+const Burger = () => {
   return (
     <StyledBurger>
       <div/>

@@ -36,14 +36,14 @@ const CenteredMetric = (context: PieContext) => {
   )
 }
 
-interface Props {
+interface PieGraphProps {
   data: object[];
   id: string;
   value: string | DatumValueAccessorFunction<object>;
   eneableLegend?: boolean;
 }
 
-const PieGraph: React.FC<Props> = ({data,id,value, eneableLegend=true}) => {
+const PieGraph = ({data,id,value, eneableLegend=true}:PieGraphProps) => {
 
   function layersToPrint() : PieLayer<object>[] {
     const layers: PieLayer<object>[] = ['slices','sliceLabels'];
@@ -92,6 +92,10 @@ const PieGraph: React.FC<Props> = ({data,id,value, eneableLegend=true}) => {
   )
 }
 
+
+PieGraph.defaultProps = {
+  eneableLegend: true
+}
 
 // function fullArguments() {
 //   console.log(Array.from(arguments))

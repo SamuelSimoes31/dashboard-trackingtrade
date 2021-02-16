@@ -3,7 +3,7 @@ import React from 'react';
 import { StyledArrow } from './styles';
 import ArrowIcon from '../../../images/arrow.svg'
 
-const Arrow : React.FC = () => {
+const Arrow = () => {
   return (
     <StyledArrow>
       <img src={ArrowIcon} alt=""/>

@@ -2,13 +2,13 @@ import React from 'react';
 
 import { Container, Title, Subtitle } from './styles';
 
-interface Props {
+interface CardProps {
   children: React.ReactNode;
   title: string;
   subtitle?: string;
 }
 
-const Card: React.FC<Props> = ({children,title,subtitle}) => {
+const Card = ({children,title,subtitle}:CardProps) => {
   return (
     <Container className="CardContainer">
       <Title>{title}</Title>

@@ -5,7 +5,7 @@ import Burger from './Burger';
 import Menu from './Menu';
 import Arrow from './Arrow';
 
-const SidebarMenu: React.FC = () => {
+const SidebarMenu = () => {
   return (
     <Container>
       <Bar />

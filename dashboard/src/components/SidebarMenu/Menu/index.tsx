@@ -3,7 +3,7 @@ import React from 'react';
 import { StyledMenu, StyledSpan } from './styles';
 import GraphIcon from '../../../images/graph.svg'
 
-const Menu :React.FC = () => {
+const Menu = () => {
   return (
     <StyledMenu>
       <ul>
