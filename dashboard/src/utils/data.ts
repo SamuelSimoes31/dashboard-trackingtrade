@@ -58,3 +58,22 @@ export const inspectionData = {
   id: "id",
   value: "value"
 }
+
+export const actionPlanData = {
+  data: [
+    {
+      "id": "Criados",
+      "value": 0.586,
+    },
+    {
+      "id": "Finalizados",
+      "value": 0.349
+    },
+    {
+      "id": "Em aberto",
+      "value": 0.065
+    }
+  ],
+  id: "id",
+  value: "value"
+}
