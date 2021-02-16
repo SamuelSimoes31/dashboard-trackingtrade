@@ -19,7 +19,12 @@ const Panel: React.FC = () => {
           />
         </Card>
         <Card title={"Planos de ação"} subtitle={"visão geral"}>
-          {}
+          <PieGraph 
+            data={actionPlanData.data}
+            id={actionPlanData.id}
+            value={actionPlanData.value}
+            eneableLegend={false}
+          />
         </Card>
         <Card title={"Inspeções"} subtitle={"status do dia"}>
           <PieGraph 
