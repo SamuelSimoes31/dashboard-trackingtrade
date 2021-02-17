@@ -15,10 +15,13 @@ export const CollumFlex = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* margin: 0 10px; */
 
   &:first-child { /* Levar primeiro flex pra esquerda */
     flex-grow: 1;
-    align-items: flex-start;
+    p {
+      text-align: left;
+    }
   }
 
   & > p:first-child{ /* títulos */
@@ -26,17 +29,17 @@ export const CollumFlex = styled.div`
     font-size: 12px;
     line-height: 21px;
     border: none;
+    text-transform: uppercase;
   }
 
   & > p { /* linhas de conteúdo */
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
+    text-align: center;
+    
 
     border-bottom: 0.5px solid #EBEBEB;
-    /* width: 100%; */
+    width: 100%;
   }
-
-  /* border: 1px solid green; */
-
 `;
