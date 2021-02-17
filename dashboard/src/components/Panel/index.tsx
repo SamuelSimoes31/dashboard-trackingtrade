@@ -5,7 +5,8 @@ import { Container, GridPanel } from './styles';
 import BarGraph from './Graphs/BarGraph';
 import PieGraph from './Graphs/PieGraph';
 import TableList from './Lists/TableList';
-import { historyData, inspectionData, actionPlanData, inspecScheduled } from '../../utils/data';
+import StatusList from './Lists/StatusList';
+import { historyData, inspectionData, actionPlanData, inspecScheduled, actionPLanUpdates } from '../../utils/data';
 
 const Panel = () => {
   return (
@@ -51,7 +52,10 @@ const Panel = () => {
           />
         </Card>
         <Card title={"Planos de ação"} subtitle={"atualizações"} settings filter={['Pendente','Realizado']} search>
-          {}
+          <StatusList 
+            data={actionPLanUpdates}
+            labelPerson={'responsável'}
+          />
         </Card>
         <Card title={"Inpeções Agendadas"} filter={['Diário','Mensal']} search>
           <TableList labels={inspecScheduled.labels} data={inspecScheduled.data}/>

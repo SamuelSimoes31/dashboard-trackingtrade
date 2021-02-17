@@ -1,3 +1,5 @@
+import { StatusType } from './commonTypes';
+
 export const historyData = {
   data: [
     {
@@ -150,3 +152,63 @@ export const inspecScheduled: inspecScheduledType = {
     }
   ]
 }
+
+type actionPlansUpdatesType = {
+  id: number;
+  title: string;
+  person: string;
+  status: StatusType;
+  time: string;
+}[]
+
+export const actionPLanUpdates: actionPlansUpdatesType = [
+  {
+    id: 1,
+    title: 'Nome do plano de ação',
+    person: 'Bruno Barros',
+    status: "pendente",
+    time: '10:45 10/10/10'
+  },
+  {
+    id: 2,
+    title: 'Plano de ação 2',
+    person: 'Bruno Barros',
+    status: "realizado",
+    time: '10:45 10/10/10'
+  },
+  {
+    id: 3,
+    title: 'Plano de ação 2',
+    person: 'Bruno Barros',
+    status: "realizado",
+    time: '10:45 10/10/10'
+  },
+  {
+    id: 4,
+    title: 'Plano de ação 2',
+    person: 'Bruno Barros',
+    status: "criado",
+    time: '23:45 10/11/10'
+  },
+  {
+    id: 5,
+    title: 'Plano de ação 2',
+    person: 'Bruno Barros',
+    status: "realizado",
+    time: '10:45 10/10/10'
+  },
+  {
+    id: 6,
+    title: 'Plano de ação 2',
+    person: 'Bruno Barros',
+    status: "realizado",
+    time: '10:45 10/10/10'
+  },
+  {
+    id: 7,
+    title: 'Plano de ação 42',
+    person: 'Barros Bruno',
+    status: "criado",
+    time: '10:48 11/11/11'
+  },
+]
