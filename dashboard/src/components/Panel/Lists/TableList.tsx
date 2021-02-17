@@ -13,13 +13,11 @@ const TableList = ({labels,data}: TableListProps) => {
       {labels.map(label => (
         <CollumFlex key={label}>
           <p>{label}</p>
-            {/* <RowFlex> */}
-              {
-                data.map((elem,i) => (
-                  <p key={i}>{elem[label]}</p>
-                ))
-              }
-            {/* </RowFlex> */}
+            {
+              data.map((elem,i) => (
+                <p key={i}>{elem[label]}</p>
+              ))
+            }
         </CollumFlex>
       ))}
     </Container>

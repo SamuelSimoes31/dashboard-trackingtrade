@@ -15,10 +15,11 @@ export const CollumFlex = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin: 0 10px; */
+  /* padding: 0 10px; */
 
+  flex-grow: 1;
   &:first-child { /* Levar primeiro flex pra esquerda */
-    flex-grow: 1;
+    flex-grow: 20;
     p {
       text-align: left;
     }
@@ -38,7 +39,7 @@ export const CollumFlex = styled.div`
     line-height: 21px;
     text-align: center;
     
-
+    /* margin: 0 -10px; */
     border-bottom: 0.5px solid #EBEBEB;
     width: 100%;
   }
