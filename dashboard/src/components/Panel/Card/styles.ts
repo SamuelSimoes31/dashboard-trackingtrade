@@ -59,6 +59,19 @@ export const Container = styled.div<ContainerProps>`
     z-index: 10;
   }
 
+  input[type="text"] {
+    width: 100%;
+    height: 34px;
+
+    padding: 0 10px;
+    margin: 10px 0;
+
+    background: #FAFAFA;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    border-radius: 100px;
+  }
+
 `;
 
 export const Title = styled.p`

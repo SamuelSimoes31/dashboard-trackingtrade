@@ -49,10 +49,10 @@ const Panel = () => {
               value={actionPlanData.value}
           />
         </Card>
-        <Card title={"Planos de ação"} subtitle={"atualizações"} settings filter={['Pendente','Realizado']}>
+        <Card title={"Planos de ação"} subtitle={"atualizações"} settings filter={['Pendente','Realizado']} search>
           {}
         </Card>
-        <Card title={"Inpeções Agendadas"} filter={['Diário','Mensal']} >
+        <Card title={"Inpeções Agendadas"} filter={['Diário','Mensal']} search>
           {}
         </Card>
       </GridPanel>
