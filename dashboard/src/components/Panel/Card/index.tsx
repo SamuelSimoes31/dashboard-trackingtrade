@@ -9,9 +9,10 @@ interface CardProps {
   subtitle?: string;
   settings?: boolean;
   filter?: string[]; //apenas para fins práticos de dados mockados
+  details?: boolean;
 }
 
-const Card = ({children,title,subtitle,settings,filter}:CardProps) => {
+const Card = ({children,title,subtitle,settings,filter,details}:CardProps) => {
 
 
   return (
@@ -24,6 +25,7 @@ const Card = ({children,title,subtitle,settings,filter}:CardProps) => {
           {filter?.map(e => <option>{e}</option>)}
         </select>
       }
+      {details && <p className="details" onClick={() => alert('Will be implemented soon!')}>visualizar detalhes</p>}
       {children}
     </Container>
   );

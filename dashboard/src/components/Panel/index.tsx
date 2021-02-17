@@ -30,7 +30,12 @@ const Panel = () => {
             eneableLegend={false}
           />
         </Card>
-        <Card title={"Inspeções"} subtitle={"status do dia"} settings>
+        <Card 
+          title={"Inspeções"} 
+          subtitle={"status do dia"} 
+          settings
+          details
+        >
           <PieGraph 
             data={inspectionData.data}
             id={inspectionData.id}

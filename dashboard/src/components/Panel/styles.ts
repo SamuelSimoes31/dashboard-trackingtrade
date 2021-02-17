@@ -26,9 +26,9 @@ export const GridPanel = styled.div`
   display: grid;
   justify-content: center;
   grid-template: 
-    "hist       hist          plan-vision" 270px
-    "insp       plan-day      plan-updt"   270px
-    "insp-sche  insp-sche     plan-updt"   270px
+    "hist       hist          plan-vision" 275px
+    "insp       plan-day      plan-updt"   275px
+    "insp-sche  insp-sche     plan-updt"   275px
     / minmax(320px, 1fr) minmax(320px, 1fr) minmax(320px, 1fr);
 
   gap: 15px;
@@ -36,22 +36,22 @@ export const GridPanel = styled.div`
 
   @media(max-width: 1325px) {
     grid-template: 
-    "hist       plan-vision" 270px
-    "insp       plan-day"    270px
-    "plan-updt  plan-updt"   270px
-    "insp-sche  insp-sche"   270px
+    "hist       plan-vision" 275px
+    "insp       plan-day"    275px
+    "plan-updt  plan-updt"   275px
+    "insp-sche  insp-sche"   275px
     / minmax(320px, 1fr)       minmax(320px, 1fr);
   }
 
   @media(max-width: 990px) {
     grid-template: 
-    "hist"        270px
-    "plan-vision" 270px
-    "insp"        270px
-    "plan-day"    270px
-    "plan-updt"   270px
-    "plan-updt"   270px
-    "insp-sche"   270px
+    "hist"        275px
+    "plan-vision" 275px
+    "insp"        275px
+    "plan-day"    275px
+    "plan-updt"   275px
+    "plan-updt"   275px
+    "insp-sche"   275px
     / minmax(320px, 1fr);
   }
 

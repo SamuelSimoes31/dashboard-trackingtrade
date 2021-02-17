@@ -11,7 +11,7 @@ interface PieContext {
   innerRadius:  number;
 }
 
-const CenteredMetric = (context: PieContext) => {
+const LegendValuesLayer = (context: PieContext) => {
   const { dataWithArc, centerY } = context;
   
   return (
@@ -21,7 +21,7 @@ const CenteredMetric = (context: PieContext) => {
           <text
           key={index}
           x={125}
-          y={centerY+88+(20*index) }
+          y={centerY+80+(20*index) }
           textAnchor="middle"
           dominantBaseline="central"
           style={{
@@ -47,7 +47,7 @@ const PieGraph = ({data,id,value, eneableLegend=true}:PieGraphProps) => {
 
   function layersToPrint() : PieLayer<object>[] {
     const layers: PieLayer<object>[] = ['slices','sliceLabels'];
-    if(eneableLegend) return layers.concat(['legends',CenteredMetric])
+    if(eneableLegend) return layers.concat(['legends',LegendValuesLayer])
     else return layers;
   }
 
@@ -59,7 +59,7 @@ const PieGraph = ({data,id,value, eneableLegend=true}:PieGraphProps) => {
     valueFormat={' >-.1%'}
     innerRadius={0.8}
     colors={['#7FC008','#DB8C28','#EB5757']}
-    margin={{ top: 5, right: 10, bottom: 90, left: 10 }}
+    margin={{ top: 5, right: 10, bottom: 110, left: 10 }}
       enableRadialLabels={false}
       enableSliceLabels={!eneableLegend}
       legends={

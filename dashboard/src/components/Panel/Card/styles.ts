@@ -44,9 +44,25 @@ export const Container = styled.div<ContainerProps>`
     border: none;
   }
 
+  .details {
+    position: absolute;
+
+    bottom: 3px;
+    left: 25px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #333333;
+    z-index: 10;
+  }
+
 `;
 
 export const Title = styled.p`
+  
   height: 13px;
   font-weight: 600;
   font-size: 14px;
