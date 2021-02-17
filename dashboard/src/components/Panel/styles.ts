@@ -28,7 +28,7 @@ export const GridPanel = styled.div`
   grid-template: 
     "hist       hist          plan-vision" 275px
     "insp       plan-day      plan-updt"   275px
-    "insp-sche  insp-sche     plan-updt"   275px
+    "insp-sche  insp-sche     plan-updt"   auto
     / minmax(320px, 1fr) minmax(320px, 1fr) minmax(320px, 1fr);
 
   gap: 15px;
@@ -39,7 +39,7 @@ export const GridPanel = styled.div`
     "hist       plan-vision" 275px
     "insp       plan-day"    275px
     "plan-updt  plan-updt"   275px
-    "insp-sche  insp-sche"   275px
+    "insp-sche  insp-sche"   auto
     / minmax(320px, 1fr)       minmax(320px, 1fr);
   }
 
@@ -51,7 +51,7 @@ export const GridPanel = styled.div`
     "plan-day"    275px
     "plan-updt"   275px
     "plan-updt"   275px
-    "insp-sche"   275px
+    "insp-sche"   auto
     / minmax(320px, 1fr);
   }
 

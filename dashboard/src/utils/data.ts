@@ -81,6 +81,7 @@ export const actionPlanData = {
 type inspecScheduledType = {
   labels: ['nome','planejado','realizado','última atualização'];
   data: {
+    'id': number;
     'nome': string;
     'planejado': number;
     'realizado': number;
@@ -92,14 +93,58 @@ export const inspecScheduled: inspecScheduledType = {
   labels: ['nome','planejado','realizado','última atualização'],
   data: [
     {
+      id: 0,
       nome: 'Larissa Silva Gonçaves',
       planejado: 10,
       realizado: 10,
       "última atualização": '08:10h'
     },
     {
-      nome: 'Larissa Silva Gonçaves',
-      planejado: 10,
+      id: 1,
+      nome: 'Lucas Silva Santos',
+      planejado: 8,
+      realizado: 10,
+      "última atualização": '08:10h'
+    },
+    {
+      id: 2,
+      nome: 'Raissa Oliveira Araujo',
+      planejado: 8,
+      realizado: 10,
+      "última atualização": '08:10h'
+    },
+    {
+      id: 3,
+      nome: 'Vitória Sousa Cavalcanti',
+      planejado: 8,
+      realizado: 10,
+      "última atualização": '08:10h'
+    },
+    {
+      id: 4,
+      nome: 'Emily Araujo Oliveira',
+      planejado: 8,
+      realizado: 10,
+      "última atualização": '08:10h'
+    },
+    {
+      id: 5,
+      nome: 'Nicolas Pereira Sousa',
+      planejado: 8,
+      realizado: 10,
+      "última atualização": '08:10h'
+    },
+    {
+      id: 6,
+      nome: 'Leila Dias Costa',
+      planejado: 8,
+      realizado: 10,
+      "última atualização": '08:10h'
+    },
+    {
+      id: 7,
+      nome: 'Laura Castro Gomes',
+      planejado: 8,
       realizado: 10,
       "última atualização": '08:10h'
     }

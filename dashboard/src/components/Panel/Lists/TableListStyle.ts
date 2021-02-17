@@ -1,46 +1,39 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: flex-end;
+export const Table = styled.table`
+  color: #333333;
+  width: 100%;
 
-  p {
-    color: #333333;
-  }
+  colgroup {
+    col:first-child {
+      width:60%;
+    }
+    col:last-child {
 
-`;
-
-export const CollumFlex = styled.div`
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* padding: 0 10px; */
-
-  flex-grow: 1;
-  &:first-child { /* Levar primeiro flex pra esquerda */
-    flex-grow: 20;
-    p {
-      text-align: left;
     }
   }
 
-  & > p:first-child{ /* títulos */
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 21px;
-    border: none;
-    text-transform: uppercase;
+  th:first-child, td:first-child {
+    text-align: left;
   }
 
-  & > p { /* linhas de conteúdo */
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    
-    /* margin: 0 -10px; */
-    border-bottom: 0.5px solid #EBEBEB;
-    width: 100%;
+  tr {
+    line-height: 25px;
   }
+
+  th {
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  td {
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    /* white-space: nowrap; */
+    border-bottom: 0.5px solid #EBEBEB;
+  }
+
 `;

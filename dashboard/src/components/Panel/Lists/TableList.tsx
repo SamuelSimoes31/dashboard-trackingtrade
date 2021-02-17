@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, CollumFlex } from './TableListStyle';
+import { Table } from './TableListStyle';
 
 interface TableListProps {
   labels: string[];
@@ -9,19 +9,28 @@ interface TableListProps {
 
 const TableList = ({labels,data}: TableListProps) => {
   return (
-    <Container>
-      {labels.map(label => (
-        <CollumFlex key={label}>
-          <p>{label}</p>
+    <Table>
+      <colgroup>
+        <col />
+        <col span={labels.length-1}/>
+      </colgroup>
+      <tr>
+        {labels.map( label => <th key={label}>{label}</th>)}
+      </tr>
+      {
+        data.map((elem,i) => (
+          <tr key={elem.id}>
             {
-              data.map((elem,i) => (
-                <p key={i}>{elem[label]}</p>
+              labels.map((label,i) => (
+                <td key={i}>{elem[label]}</td>
               ))
             }
-        </CollumFlex>
-      ))}
-    </Container>
+          </tr>
+        ))
+      }
+    </Table>
   );
+
 }
 
 /*
