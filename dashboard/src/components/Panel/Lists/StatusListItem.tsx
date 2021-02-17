@@ -1,7 +1,6 @@
 import React from 'react';
 import { StatusType } from '../../../utils/commonTypes';
 import {Container, Title, StatusContainer} from './StatusListItemStyle';
-import ArrowIcon from '../../../images/arrow.svg'
 
 interface StatusListItemProps {
   title: string;
@@ -19,7 +18,6 @@ const StatusListItem = ({title,person,labelPerson,status,time}: StatusListItemPr
         <div className={'flex'}>
           <StatusContainer status={status}><p>{status}</p></StatusContainer>
           {(status === 'pendente') && (<>
-            {/* <img src={ArrowIcon} alt=""/> */}
             {'>'}
             <StatusContainer status={'realizado'}><p>{'realizado'}</p></StatusContainer>
             </>)}

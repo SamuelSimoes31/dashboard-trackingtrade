@@ -24,7 +24,11 @@ const Panel = () => {
             index={historyData.index}
           />
         </Card>
-        <Card title={"Planos de ação"} subtitle={"visão geral"} settings>
+        <Card
+          title={"Planos de ação"}
+          subtitle={"visão geral"}
+          settings
+        >
           <PieGraph 
             data={actionPlanData.data}
             id={actionPlanData.id}
@@ -36,7 +40,6 @@ const Panel = () => {
           title={"Inspeções"} 
           subtitle={"status do dia"} 
           settings
-          details
         >
           <PieGraph 
             data={inspectionData.data}
@@ -44,14 +47,25 @@ const Panel = () => {
             value={inspectionData.value}
           />
         </Card>
-        <Card title={"Plano de ação"} subtitle={"status do dia"} settings>
+        <Card
+          title={"Plano de ação"}
+          subtitle={"status do dia"}
+          settings
+          details
+        >
           <PieGraph 
               data={actionPlanData.data}
               id={actionPlanData.id}
               value={actionPlanData.value}
           />
         </Card>
-        <Card title={"Planos de ação"} subtitle={"atualizações"} settings filter={['Pendente','Realizado']} search>
+        <Card
+          title={"Planos de ação"}
+          subtitle={"atualizações"}
+          settings
+          filter={['Pendente','Realizado']}
+          search
+        >
           <StatusList 
             data={actionPLanUpdates}
             labelPerson={'responsável'}

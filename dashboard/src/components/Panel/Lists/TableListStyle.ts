@@ -9,7 +9,7 @@ export const Table = styled.table`
       width:60%;
     }
     col:last-child {
-
+      
     }
   }
 
@@ -26,6 +26,7 @@ export const Table = styled.table`
     font-size: 10px;
     text-transform: uppercase;
     white-space: nowrap;
+    padding: 0 2px;
   }
 
   td {
