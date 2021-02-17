@@ -3,8 +3,9 @@ import Card from './Card';
 
 import { Container, GridPanel } from './styles';
 import BarGraph from './Graphs/BarGraph';
-import { historyData, inspectionData, actionPlanData } from '../../utils/data';
 import PieGraph from './Graphs/PieGraph';
+import TableList from './Lists/TableList';
+import { historyData, inspectionData, actionPlanData, inspecScheduled } from '../../utils/data';
 
 const Panel = () => {
   return (
@@ -53,7 +54,7 @@ const Panel = () => {
           {}
         </Card>
         <Card title={"Inpeções Agendadas"} filter={['Diário','Mensal']} search>
-          {}
+          <TableList labels={inspecScheduled.labels} data={inspecScheduled.data}/>
         </Card>
       </GridPanel>
     </Container>
