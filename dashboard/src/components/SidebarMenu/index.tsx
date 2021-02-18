@@ -6,14 +6,18 @@ import Menu from './Menu';
 import Arrow from './Arrow';
 import Switch from './Switch';
 
-const SidebarMenu = () => {
+interface SidebarMenuProps {
+  toggleTheme(): void;
+}
+
+const SidebarMenu = ( {toggleTheme} :SidebarMenuProps) => {
   return (
     <Container>
       <Bar />
       <Burger />
       <Menu />
       <Arrow />
-      <Switch onChange={() => {console.log('OPA')}}/>
+      <Switch onChange={toggleTheme}/>
     </Container>
     
   );

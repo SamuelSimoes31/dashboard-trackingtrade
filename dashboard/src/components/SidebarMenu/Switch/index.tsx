@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, Slider } from './styles';
 
 interface SwitchProps {
-  onChange: () => void;
+  onChange(): void;
 }
 
 const Switch = ( {onChange}:SwitchProps ) => {

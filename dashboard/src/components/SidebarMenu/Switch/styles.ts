@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.label`
+  position: fixed;
   z-index: 10;
-  position: relative;
   top: 4px;
   left: 5.5px;
   display: inline-block;
