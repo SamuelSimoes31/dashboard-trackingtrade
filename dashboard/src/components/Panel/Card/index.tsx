@@ -23,7 +23,7 @@ const Card = ({children,title,subtitle,settings,filter,details,search}:CardProps
       {settings && <img src={GearIcon} alt='GearIcon' onClick={() => alert('Will be implemented soon!')}/>}
       {filter && 
         <select name="filter">
-          {filter?.map(e => <option>{e}</option>)}
+          {filter?.map((e,i) => <option key={i}>{e}</option>)}
         </select>
       }
       {details && <p className="details" onClick={() => alert('Will be implemented soon!')}>visualizar detalhes</p>}

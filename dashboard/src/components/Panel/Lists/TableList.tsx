@@ -14,9 +14,12 @@ const TableList = ({labels,data}: TableListProps) => {
         <col />
         <col span={labels.length-1}/>
       </colgroup>
-      <tr>
-        {labels.map( label => <th key={label}>{label}</th>)}
-      </tr>
+      <thead>
+        <tr>
+          {labels.map( label => <th key={label}>{label}</th>)}
+        </tr>
+      </thead>
+      <tbody>
       {
         data.map((elem,i) => (
           <tr key={elem.id}>
@@ -28,6 +31,7 @@ const TableList = ({labels,data}: TableListProps) => {
           </tr>
         ))
       }
+      </tbody>
     </Table>
   );
 
