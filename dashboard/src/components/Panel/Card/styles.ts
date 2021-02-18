@@ -28,7 +28,7 @@ export const Container = styled.div<ContainerProps>`
     top: 10px;
     right: 40px;
 
-    background: #C4C4C4;
+    background: ${({theme}) => theme.colors.select_background};
     border-radius: 100px;
 
     font-family: Poppins;

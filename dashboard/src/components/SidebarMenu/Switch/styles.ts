@@ -16,11 +16,11 @@ export const Container = styled.label`
   }
 
   input:checked + span {
-    background-color: ${({theme}) => theme.colors.primary};
+    background-color: ${({theme}) => theme.colors.background};
   }
 
   input:focus + span {
-    box-shadow: 0 0 1px ${({theme}) => theme.colors.primary};
+    box-shadow: 0 0 1px ${({theme}) => theme.colors.background};
   }
 
   input:checked + span:before {
@@ -38,7 +38,7 @@ export const Slider = styled.span`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: ${({theme}) => theme.colors.background};
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 34px;
@@ -50,7 +50,7 @@ export const Slider = styled.span`
     width: 16px;
     left: 4px;
     bottom: 2px;
-    background-color: white;
+    background-color: ${({theme}) => theme.colors.text_primary};
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;

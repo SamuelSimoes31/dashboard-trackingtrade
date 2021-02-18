@@ -8,7 +8,7 @@ export const StyledBurger = styled.button`
   top: 136px;
   border-radius: 50%;
 
-  background: #FAFAFA;
+  background: ${({theme}) => theme.colors.background};
   border-style: none;
   outline-style: none;
 
@@ -21,7 +21,7 @@ export const StyledBurger = styled.button`
     width: 20px;
     height: 2px;
     margin: 1.5px;
-    background: #333;
+    background: ${({theme}) => theme.colors.text_primary};
     border-radius: 10px;
   }
 `;
