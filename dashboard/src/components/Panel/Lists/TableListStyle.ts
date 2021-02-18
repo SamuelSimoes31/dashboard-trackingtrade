@@ -4,6 +4,8 @@ export const Table = styled.table`
   color: ${({theme}) => theme.colors.text_primary};
   width: 100%;
 
+  border-spacing: 0 2px;
+
   colgroup {
     col:first-child {
       width:60%;
