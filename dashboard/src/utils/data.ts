@@ -19,8 +19,8 @@ export const historyData = {
     },
     {
       "day": 4,
-      "Inspeções realizadas": 1,
-      "Planos de ação criados": 4
+      "Inspeções realizadas": 4,
+      "Planos de ação criados": 1
     },
     {
       "day": 5,
@@ -29,13 +29,28 @@ export const historyData = {
     },
     {
       "day": 6,
-      "Inspeções realizadas": 1,
-      "Planos de ação criados": 4
+      "Inspeções realizadas": 7,
+      "Planos de ação criados": 8
     },
     {
       "day": 7,
-      "Inspeções realizadas": 1,
+      "Inspeções realizadas": 8,
+      "Planos de ação criados": 8
+    },
+    {
+      "day": 8,
+      "Inspeções realizadas": 2,
+      "Planos de ação criados": 3
+    },
+    {
+      "day": 9,
+      "Inspeções realizadas": 0,
       "Planos de ação criados": 4
+    },
+    {
+      "day": 10,
+      "Inspeções realizadas": 3,
+      "Planos de ação criados": 8
     }
   ],
   index: "day",
