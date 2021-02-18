@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  z-index: -1;
   flex-grow: 1;
   position: relative;
   

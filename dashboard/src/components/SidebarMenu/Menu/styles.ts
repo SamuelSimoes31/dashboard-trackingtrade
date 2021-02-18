@@ -5,6 +5,7 @@ interface StyledMenuProps {
 }
 
 export const StyledMenu = styled.div<StyledMenuProps>`
+  z-index: 9;
   position: fixed;
   left: 51px;
   width: 228px;
@@ -26,7 +27,7 @@ export const StyledMenu = styled.div<StyledMenuProps>`
     }
   }
 
-  transition: all 0.3s linear;
+  transition: transform 0.3s linear;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
 `;
 

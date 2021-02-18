@@ -5,6 +5,7 @@ interface StyledArrowProps {
 }
 
 export const StyledArrow = styled.div<StyledArrowProps>`
+  z-index: 10;
   position: fixed;
   left: 272px;
   top: 78px;

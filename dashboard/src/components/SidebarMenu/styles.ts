@@ -9,12 +9,13 @@ export const Container = styled.div<ContainerProps>`
   position: relative;
   /* width: 279px; */
   width: ${({open})=> open?279:51}px;
-  transition: all 0.3s linear;
+  transition: width 0.3s linear;
   height: 100vh;
   margin: 0;  
 `;
 
 export const Bar = styled.nav`
+  z-index: 9;
   position: fixed;
   width: 51px;
   height: 100vh;

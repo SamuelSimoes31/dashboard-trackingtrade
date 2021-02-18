@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledBurger = styled.button`
+  z-index:10; 
   position: fixed;
   width: 61px;
   height: 61px;
