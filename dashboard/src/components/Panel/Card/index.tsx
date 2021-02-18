@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Title, Subtitle } from './styles';
+import { Container, Title, Subtitle, ChildrenWrapper, CardHeader } from './styles';
 import GearIcon from '../../../images/gear.svg';
 
 interface CardProps {
@@ -18,17 +18,21 @@ const Card = ({children,title,subtitle,settings,filter,details,search}:CardProps
 
   return (
     <Container className="CardContainer" >
-      <Title>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
-      {settings && <img src={GearIcon} alt='GearIcon' onClick={() => alert('Will be implemented soon!')}/>}
-      {filter && 
-        <select name="filter">
-          {filter?.map((e,i) => <option key={i}>{e}</option>)}
-        </select>
-      }
-      {details && <p className="details" onClick={() => alert('Will be implemented soon!')}>visualizar detalhes</p>}
-      {search && <input type="text" placeholder="Pesquise"></input>}
-      {children}
+      <CardHeader>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
+        {settings && <img src={GearIcon} alt='GearIcon' onClick={() => alert('Will be implemented soon!')}/>}
+        {filter && 
+          <select name="filter">
+            {filter?.map((e,i) => <option key={i}>{e}</option>)}
+          </select>
+        }
+        {details && <p className="details" onClick={() => alert('Will be implemented soon!')}>visualizar detalhes</p>}
+        {search && <input type="text" placeholder="Pesquise"></input>}
+      </CardHeader>
+      <ChildrenWrapper hasSearchBar={!!search}>
+        {children}
+      </ChildrenWrapper>
     </Container>
   );
 }

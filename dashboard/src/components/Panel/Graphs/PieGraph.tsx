@@ -11,6 +11,9 @@ interface PieContext {
   innerRadius:  number;
 }
 
+//Como não consegui alterar os labels da nivo (sei que é possível mas existe pouca oducmentação sobre a @nivo/legends)
+//então decidi criar uma layer por cima das outras layers do gráfico, assim com um novo JSX eu boto os números
+//sim, é uma gambiarra e o ideal é personalizar os labels, mas para não perder tempo demais nisso da legenda fiz dessa maneira
 const LegendValuesLayer = (context: PieContext) => {
   const { dataWithArc, centerY } = context;
   
@@ -21,7 +24,7 @@ const LegendValuesLayer = (context: PieContext) => {
           <text
           key={index}
           x={125}
-          y={centerY+80+(20*index) }
+          y={centerY+85+(20*index) }
           textAnchor="middle"
           dominantBaseline="central"
           style={{
@@ -62,7 +65,7 @@ const PieGraph = ({data,id,value, eneableLegend=true}:PieGraphProps) => {
     valueFormat={' >-.1%'}
     innerRadius={0.8}
     colors={['#7FC008','#DB8C28','#EB5757']}
-    margin={{ top: eneableLegend?5:20, right: 10, bottom: eneableLegend?110:50, left: 10 }}
+    margin={{ top: eneableLegend?5:20, right: 10, bottom: eneableLegend?70:0, left: 10 }}
       enableRadialLabels={!eneableLegend}
       enableSliceLabels={false}
       legends={

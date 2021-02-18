@@ -1,12 +1,24 @@
 import styled from 'styled-components';
 
-interface ContainerProps {
-  settings?: boolean;
-  filter?: boolean;
+interface ChildrenWrapperProps {
+  hasSearchBar: boolean;
 }
 
-export const Container = styled.div<ContainerProps>`
+export const CardHeader = styled.div`
+  /* border: 1px solid orange; */
+`;
+
+export const ChildrenWrapper = styled.div<ChildrenWrapperProps>`
   position: relative;
+  
+  height: calc(100% - ${({hasSearchBar}) => hasSearchBar?84:30}px);
+  /* border: 1px solid cyan; */
+`;
+
+export const Container = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
   
   background: ${({theme}) => theme.colors.card_background};
   border: 0.5px solid #E4E4E4;

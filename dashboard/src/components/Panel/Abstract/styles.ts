@@ -4,7 +4,7 @@ export const Container = styled.div`
   position: absolute;
   width: 130px;
   bottom: 30px;
-  right: 10px;
+  right: 0px;
   
 
   & > p {

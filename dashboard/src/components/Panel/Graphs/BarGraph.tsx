@@ -19,7 +19,7 @@ const BarGraph = ({data,keys,index}:BarGraphProps) => {
       indexBy={index}
       groupMode={'grouped'}
       layout={'vertical'}
-      margin={{ top: 5, right: 10, bottom: 80, left: 10 }}
+      margin={{ top: 5, right: 10, bottom: 65, left: 10 }}
       innerPadding={2}
       padding={0.6}
       // indexScale={{"type":"band","round":false}}
