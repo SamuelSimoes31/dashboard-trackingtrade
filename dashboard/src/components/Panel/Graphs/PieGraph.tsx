@@ -46,7 +46,7 @@ interface PieGraphProps {
 const PieGraph = ({data,id,value, eneableLegend=true}:PieGraphProps) => {
 
   function layersToPrint() : PieLayer<object>[] {
-    const layers: PieLayer<object>[] = ['slices','sliceLabels'];
+    const layers: PieLayer<object>[] = ['slices','radialLabels'];
     if(eneableLegend) return layers.concat(['legends',LegendValuesLayer])
     else return layers;
   }
@@ -59,9 +59,9 @@ const PieGraph = ({data,id,value, eneableLegend=true}:PieGraphProps) => {
     valueFormat={' >-.1%'}
     innerRadius={0.8}
     colors={['#7FC008','#DB8C28','#EB5757']}
-    margin={{ top: 5, right: 10, bottom: 110, left: 10 }}
-      enableRadialLabels={false}
-      enableSliceLabels={!eneableLegend}
+    margin={{ top: eneableLegend?5:20, right: 10, bottom: eneableLegend?110:50, left: 10 }}
+      enableRadialLabels={!eneableLegend}
+      enableSliceLabels={false}
       legends={
         [
           {
@@ -96,11 +96,5 @@ const PieGraph = ({data,id,value, eneableLegend=true}:PieGraphProps) => {
 PieGraph.defaultProps = {
   eneableLegend: true
 }
-
-// function fullArguments() {
-//   console.log(Array.from(arguments))
-//   return <text>{"A POW"}</text>
-// }
-
 
 export default PieGraph;
