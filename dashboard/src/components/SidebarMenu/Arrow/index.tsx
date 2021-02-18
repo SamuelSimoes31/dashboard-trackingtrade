@@ -3,9 +3,9 @@ import React from 'react';
 import { StyledArrow } from './styles';
 import ArrowIcon from '../../../images/arrow.svg'
 
-const Arrow = () => {
+const Arrow = ({open} : {open:boolean}) => {
   return (
-    <StyledArrow>
+    <StyledArrow open={open}>
       <img src={ArrowIcon} alt=""/>
     </StyledArrow>
   );

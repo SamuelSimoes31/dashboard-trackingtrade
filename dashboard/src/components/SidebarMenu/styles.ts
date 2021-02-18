@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  open: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   display: inline-block;
   position: relative;
-  width: 279px;
+  /* width: 279px; */
+  width: ${({open})=> open?279:51}px;
+  transition: all 0.3s linear;
   height: 100vh;
-  margin: 0;
+  margin: 0;  
 `;
 
 export const Bar = styled.nav`

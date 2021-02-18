@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
-export const StyledMenu = styled.div`
+interface StyledMenuProps {
+  open: boolean;
+}
+
+export const StyledMenu = styled.div<StyledMenuProps>`
   position: fixed;
   left: 51px;
   width: 228px;
   height:100vh;
-  border-right: 1px solid #EBEBEB;
 
   padding-top: 111px;
 
@@ -13,15 +16,18 @@ export const StyledMenu = styled.div`
   flex-direction: column;
   align-items:center;
 
-  ul {
-    
-    list-style-type: none;
+  border-right: 1px solid #EBEBEB;
+  background: ${({theme}) => theme.colors.background};
 
+  ul {
+    list-style-type: none;
     li {
       margin: 15px;
     }
   }
 
+  transition: all 0.3s linear;
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
 `;
 
 export const StyledSpan = styled.span`

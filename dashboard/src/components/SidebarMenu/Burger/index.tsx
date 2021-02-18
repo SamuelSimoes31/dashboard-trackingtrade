@@ -2,9 +2,13 @@ import React from 'react';
 
 import { StyledBurger } from './styles';
 
-const Burger = () => {
+interface Props {
+  toggleOpen(): void;
+}
+
+const Burger = ({toggleOpen}:Props) => {
   return (
-    <StyledBurger>
+    <StyledBurger onClick={toggleOpen}>
       <div/>
       <div/>
       <div/>

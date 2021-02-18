@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Bar } from './styles';
 
 import Burger from './Burger';
@@ -11,12 +11,33 @@ interface SidebarMenuProps {
 }
 
 const SidebarMenu = ( {toggleTheme} :SidebarMenuProps) => {
+  const [open, setOpen] = useState(true);
+
+  const toggleOpen = () => {
+    setOpen(!open);
+  }
+  
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
+  useEffect(() => {
+    if(width < 750 ) setOpen(false) ;
+  },[width]);
+
+
   return (
-    <Container>
+    <Container open={open} >
+      <Menu open={open}/>
       <Bar />
-      <Burger />
-      <Menu />
-      <Arrow />
+      <Burger toggleOpen={toggleOpen}/>
+      <Arrow open={open}/>
       <Switch onChange={toggleTheme}/>
     </Container>
     
