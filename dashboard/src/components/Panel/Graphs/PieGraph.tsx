@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { ResponsivePie , DatumValueAccessorFunction, PieLayer} from '@nivo/pie'
-
+import { ThemeContext } from 'styled-components';
 
 interface PieContext {
   dataWithArc:  Array<any>;
@@ -51,11 +51,14 @@ const PieGraph = ({data,id,value, eneableLegend=true}:PieGraphProps) => {
     else return layers;
   }
 
+  const { nivoTheme } = useContext(ThemeContext);
+
   return (
     <ResponsivePie
     data={data}
     id={id}
     value={value}
+    theme={nivoTheme}
     valueFormat={' >-.1%'}
     innerRadius={0.8}
     colors={['#7FC008','#DB8C28','#EB5757']}

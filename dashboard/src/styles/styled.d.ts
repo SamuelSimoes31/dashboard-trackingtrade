@@ -14,5 +14,30 @@ declare module 'styled-components' {
         text_secundary: string;
         text_legend: string;
     };
+    nivoTheme:{
+      background: string;
+      textColor: string;
+      fontSize: number;
+      axis?: {
+          domain: {
+              line: {
+                  stroke: string;
+                  strokeWidth: number;
+              };
+          };
+          ticks: {
+              line: {
+                  stroke: string;
+                  strokeWidth: number;
+              };
+          };
+      };
+      grid?: {
+          line: {
+              stroke: string;
+              strokeWidth: number;
+          };
+      };
+    }
   }
 }

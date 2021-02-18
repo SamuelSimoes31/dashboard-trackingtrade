@@ -43,12 +43,12 @@ const Panel = () => {
           subtitle={"status do dia"} 
           settings
         >
-          <Abstract title={abstractData.title} lines={abstractData.lines}/>
           <PieGraph 
             data={inspectionData.data}
             id={inspectionData.id}
             value={inspectionData.value}
           />
+          <Abstract title={abstractData.title} lines={abstractData.lines}/>
         </Card>
         <Card
           title={"Plano de ação"}
@@ -56,12 +56,12 @@ const Panel = () => {
           settings
           details
         >
-          <Abstract title={abstractData.title} lines={abstractData.lines}/>
           <PieGraph 
               data={actionPlanData.data}
               id={actionPlanData.id}
               value={actionPlanData.value}
           />
+          <Abstract title={abstractData.title} lines={abstractData.lines}/>
         </Card>
         <Card
           title={"Planos de ação"}

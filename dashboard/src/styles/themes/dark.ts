@@ -10,9 +10,16 @@ const dark = {
 
     text_primary: '#FAFAFA',
     text_secundary: '#C4C4C4',
-    text_legend: '#161616',
+    text_legend: '#FFFFFF',
     
   },
+
+  nivoTheme: {
+    background: "#2e2f37",
+    textColor: "#FAFAFA",
+    fontSize: 11,
+  }
 };
+
 
 export default dark;

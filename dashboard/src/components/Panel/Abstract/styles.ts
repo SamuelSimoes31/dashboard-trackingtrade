@@ -24,7 +24,7 @@ export const Container = styled.div`
       font-size: 11px;
       line-height: 17px;
 
-      ${({theme}) => theme.colors.text_legend};
+      color: ${({theme}) => theme.colors.text_legend};
     }
   }
 `;

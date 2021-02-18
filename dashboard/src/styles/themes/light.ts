@@ -13,6 +13,12 @@ const light = {
     text_legend: '#161616',
     
   },
+
+  nivoTheme: {
+    background: "#ffffff",
+    textColor: "#333333",
+    fontSize: 11,
+  }
 };
 
 export default light;
