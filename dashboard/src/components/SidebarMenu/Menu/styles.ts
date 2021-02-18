@@ -28,5 +28,5 @@ export const StyledSpan = styled.span`
   font-size: 15px;
   line-height: 26px;
 
-  color: #0794B2;
+  color: ${props => props.theme.colors.primary};
 `;

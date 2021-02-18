@@ -17,7 +17,7 @@ export const Container = styled.div`
     &:last-child {
       font-size: 12px;
       line-height: 18px;
-      color: #B0B0B0;
+      color: ${({theme}) => theme.colors.text_secundary};
     }
   }
 
@@ -33,7 +33,7 @@ export const Title = styled.p`
   font-weight: 500;
   font-size: 12px;
   line-height: 25px;
-  color: #333333;
+  color: ${({theme}) => theme.colors.text_primary};
 `;
 
 

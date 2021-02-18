@@ -9,7 +9,7 @@ export const StyledArrow = styled.div`
   height: 15px;
 
   border-radius: 50%;
-  background: #0794B3;
+  background: ${props => props.theme.colors.primary};
 
   display: flex;
   justify-content: center;

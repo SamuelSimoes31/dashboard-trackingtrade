@@ -12,7 +12,7 @@ export const Container = styled.div`
     font-weight: normal;
     font-size: 11px;
     line-height: 15px;
-    color: #B0B0B0;
+    color: ${({theme}) => theme.colors.text_secundary};
   }
 
   div{
@@ -24,7 +24,7 @@ export const Container = styled.div`
       font-size: 11px;
       line-height: 17px;
 
-      color: #161616;
+      ${({theme}) => theme.colors.text_legend};
     }
   }
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Table = styled.table`
-  color: #333333;
+  color: ${({theme}) => theme.colors.text_primary};
   width: 100%;
 
   colgroup {

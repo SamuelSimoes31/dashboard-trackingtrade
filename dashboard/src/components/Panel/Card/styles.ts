@@ -8,7 +8,7 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   position: relative;
   
-  background: #FFFFFF;
+  background: ${({theme}) => theme.colors.card_background};
   border: 0.5px solid #E4E4E4;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
@@ -37,7 +37,7 @@ export const Container = styled.div<ContainerProps>`
     font-size: 14px;
     line-height: 21px;
 
-    color: #333333;
+    color: ${({theme}) => theme.colors.text_primary};
 
     padding: 0 10px;
     outline: none;
@@ -55,7 +55,7 @@ export const Container = styled.div<ContainerProps>`
     font-size: 14px;
     line-height: 21px;
 
-    color: #333333;
+    color: ${({theme}) => theme.colors.text_primary};
     z-index: 10;
   }
 
@@ -80,7 +80,7 @@ export const Title = styled.p`
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  color: #333333;
+  color: ${({theme}) => theme.colors.text_primary};
   margin-bottom: 2px;
 `;
 
@@ -89,5 +89,5 @@ export const Subtitle = styled.p`
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #B0B0B0;
+  color: ${({theme}) => theme.colors.text_secundary};
 `;

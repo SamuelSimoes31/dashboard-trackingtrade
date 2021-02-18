@@ -18,7 +18,7 @@ export const Container = styled.div`
 
     margin: 20px 10px;
 
-    color: #333333;
+    color: ${({theme}) => theme.colors.text_primary};
   }
 `;
 

@@ -9,7 +9,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #FAFAFA;
+    background: ${({theme}) => theme.colors.background};
     font-family: Poppins;
     -webkit-font-smoothing: antialiased !important;
   }
