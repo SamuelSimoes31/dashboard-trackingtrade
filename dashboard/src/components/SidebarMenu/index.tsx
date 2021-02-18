@@ -4,6 +4,7 @@ import { Container, Bar } from './styles';
 import Burger from './Burger';
 import Menu from './Menu';
 import Arrow from './Arrow';
+import Switch from './Switch';
 
 const SidebarMenu = () => {
   return (
@@ -12,6 +13,7 @@ const SidebarMenu = () => {
       <Burger />
       <Menu />
       <Arrow />
+      <Switch />
     </Container>
     
   );
