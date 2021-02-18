@@ -212,3 +212,17 @@ export const actionPLanUpdates: actionPlansUpdatesType = [
     time: '10:48 11/11/11'
   },
 ]
+
+type abstractDataType = {
+  title: string;
+  lines: [string,string][];
+}
+
+export const abstractData : abstractDataType= {
+  title: 'Média de tempo',
+  lines: [
+    ['Hoje','10 min'],
+    ['Últimos 7 dias','10 min'],
+    ['últimos 30 dias','10 min']
+  ]
+}

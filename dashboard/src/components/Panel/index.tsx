@@ -1,12 +1,14 @@
 import React from 'react';
-import Card from './Card';
-
 import { Container, GridPanel } from './styles';
+
+import Card from './Card';
+import Abstract from './Abstract';
 import BarGraph from './Graphs/BarGraph';
 import PieGraph from './Graphs/PieGraph';
 import TableList from './Lists/TableList';
 import StatusList from './Lists/StatusList';
-import { historyData, inspectionData, actionPlanData, inspecScheduled, actionPLanUpdates } from '../../utils/data';
+
+import { historyData, inspectionData, actionPlanData, inspecScheduled, actionPLanUpdates, abstractData } from '../../utils/data';
 
 const Panel = () => {
   return (
@@ -41,6 +43,7 @@ const Panel = () => {
           subtitle={"status do dia"} 
           settings
         >
+          <Abstract title={abstractData.title} lines={abstractData.lines}/>
           <PieGraph 
             data={inspectionData.data}
             id={inspectionData.id}
@@ -53,6 +56,7 @@ const Panel = () => {
           settings
           details
         >
+          <Abstract title={abstractData.title} lines={abstractData.lines}/>
           <PieGraph 
               data={actionPlanData.data}
               id={actionPlanData.id}
