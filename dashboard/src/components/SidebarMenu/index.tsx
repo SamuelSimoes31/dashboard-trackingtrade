@@ -13,7 +13,7 @@ const SidebarMenu = () => {
       <Burger />
       <Menu />
       <Arrow />
-      <Switch />
+      <Switch onChange={() => {console.log('OPA')}}/>
     </Container>
     
   );
