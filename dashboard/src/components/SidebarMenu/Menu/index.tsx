@@ -1,9 +1,11 @@
 import React from 'react';
 
 import { StyledMenu, StyledSpan } from './styles';
-import GraphIcon from '../../../images/graph.svg'
+import GraphIcon from '../../../images/graph.svg';
+import { useMenuContext } from '../../../utils/menuContext';
 
-const Menu = ({open} : {open:boolean}) => {
+const Menu = () => {
+  const { open } = useMenuContext();
   return (
     <StyledMenu open={open}>
       <ul>

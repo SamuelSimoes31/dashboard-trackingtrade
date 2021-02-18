@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Container, Bar } from './styles';
 import { ThemeContext } from 'styled-components';
+import { useMenuContext } from '../../utils/menuContext';
 
 import Burger from './Burger';
 import Menu from './Menu';
@@ -12,34 +13,16 @@ interface SidebarMenuProps {
 }
 
 const SidebarMenu = ( {toggleTheme} :SidebarMenuProps) => {
-  const [open, setOpen] = useState(true);
-
-  const toggleOpen = () => {
-    setOpen(!open);
-  }
-  
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-    }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [width]);
-
-  useEffect(() => {
-    if(width < 750 ) setOpen(false) ;
-  },[width]);
+  const { open } = useMenuContext();
 
   const { title } = useContext(ThemeContext);
 
   return (
     <Container open={open} >
-      <Menu open={open}/>
+      <Menu/>
       <Bar />
-      <Burger toggleOpen={toggleOpen}/>
-      <Arrow open={open}/>
+      <Burger />
+      <Arrow/>
       <Switch onChange={toggleTheme} initialState={title==='dark'}/>
     </Container>
     

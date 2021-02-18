@@ -1,12 +1,10 @@
 import React from 'react';
+import { useMenuContext } from '../../../utils/menuContext';
 
 import { StyledBurger } from './styles';
 
-interface Props {
-  toggleOpen(): void;
-}
-
-const Burger = ({toggleOpen}:Props) => {
+const Burger = () => {
+  const { toggleOpen } = useMenuContext();
   return (
     <StyledBurger onClick={toggleOpen}>
       <div/>

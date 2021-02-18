@@ -1,8 +1,9 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import usePersistedState from './utils/usePersistedState';
 import { ThemeProvider } from 'styled-components';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
+import MenuContext, {useMenuContextValue} from './utils/menuContext';
 
 import GlobalStyle from './styles/global';
 import SiderbarMenu from './components/SidebarMenu';
@@ -13,13 +14,17 @@ const App = () => {
 
   const toggleTheme = useCallback(() => {
     setTheme(theme => theme.title === 'light' ? dark : light);
-  },[]);
+  },[setTheme]);
+
+  const menuContextValue = useMenuContextValue();
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
       <div className="App">
         <GlobalStyle />
-        <SiderbarMenu toggleTheme={toggleTheme}/>
+        <MenuContext.Provider value={menuContextValue}>
+          <SiderbarMenu toggleTheme={toggleTheme}/>
+        </MenuContext.Provider>
         <Panel />
       </div>
     </ThemeProvider>
