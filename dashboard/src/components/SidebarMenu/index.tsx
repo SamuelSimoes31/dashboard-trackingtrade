@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Container, Bar } from './styles';
+import { ThemeContext } from 'styled-components';
 
 import Burger from './Burger';
 import Menu from './Menu';
@@ -31,6 +32,7 @@ const SidebarMenu = ( {toggleTheme} :SidebarMenuProps) => {
     if(width < 750 ) setOpen(false) ;
   },[width]);
 
+  const { title } = useContext(ThemeContext);
 
   return (
     <Container open={open} >
@@ -38,7 +40,7 @@ const SidebarMenu = ( {toggleTheme} :SidebarMenuProps) => {
       <Bar />
       <Burger toggleOpen={toggleOpen}/>
       <Arrow open={open}/>
-      <Switch onChange={toggleTheme}/>
+      <Switch onChange={toggleTheme} initialState={title==='dark'}/>
     </Container>
     
   );

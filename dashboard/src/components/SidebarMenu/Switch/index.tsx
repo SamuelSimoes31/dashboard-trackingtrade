@@ -4,12 +4,13 @@ import { Container, Slider } from './styles';
 
 interface SwitchProps {
   onChange(): void;
+  initialState: boolean;
 }
 
-const Switch = ( {onChange}:SwitchProps ) => {
+const Switch = ( {onChange,initialState}:SwitchProps ) => {
   return (
     <Container>
-      <input type="checkbox" onChange={() => {onChange()}}/>
+      <input type="checkbox" onChange={() => {onChange()}} checked={initialState} />
       <Slider />
     </Container>
   );
