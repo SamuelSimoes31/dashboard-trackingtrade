@@ -21,7 +21,7 @@ export const Container = styled.div`
   flex-direction: column;
   
   background: ${({theme}) => theme.colors.card_background};
-  border: 0.5px solid #E4E4E4;
+  border: 0.5px solid ${({theme}) => theme.colors.card_border};
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
 

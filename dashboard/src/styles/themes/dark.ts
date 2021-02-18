@@ -6,6 +6,7 @@ const dark = {
 
     background: '#333333',
     card_background: '#2e2f37',
+    card_border: '#292929',
     select_background: '#232323',
 
     text_primary: '#FAFAFA',

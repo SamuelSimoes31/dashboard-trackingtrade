@@ -6,6 +6,7 @@ const light = {
 
     background: '#FAFAFA',
     card_background: '#FFFFFF',
+    card_border: '#E4E4E4',
     select_background: '#C4C4C4',
 
     text_primary: '#333333',

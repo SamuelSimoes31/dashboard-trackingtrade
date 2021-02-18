@@ -8,6 +8,7 @@ declare module 'styled-components' {
 
         background: string;
         card_background: string;
+        card_border: string;
         select_background: string;
 
         text_primary: string;
