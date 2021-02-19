@@ -65,7 +65,7 @@ const PieGraph = ({data,id,value, eneableLegend=true}:PieGraphProps) => {
     valueFormat={' >-.1%'}
     innerRadius={0.8}
     colors={['#7FC008','#DB8C28','#EB5757']}
-    margin={{ top: eneableLegend?5:20, right: 10, bottom: eneableLegend?70:0, left: 10 }}
+    margin={{ top: eneableLegend?5:20, right: eneableLegend?10:100, bottom: eneableLegend?70:0, left: eneableLegend?10:100 }}
       enableRadialLabels={!eneableLegend}
       enableSliceLabels={false}
       legends={
