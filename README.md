@@ -6,5 +6,7 @@ Mas aqui a ideia seria puxar todos esses dados (não necessariamente nesses form
 Alguns "position: absolute" poderiam ser substituídos por display flex para uma estilização mais responsiva e segura.
 Assim como um entendimento melhor dados e da interface implica em uma melhor componentização e distribuição dos mesmos.
 
+Adicionei funcionalidade de troca e tema claro/escuro para aproveitar de algumas funcionalidades do styled-components e junto utilizar hooks e context API.
+
 ![Alt text](/Screenshot_light.png)
 ![Alt text](/Screenshot_dark.png)
