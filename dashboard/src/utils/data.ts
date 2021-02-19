@@ -187,21 +187,21 @@ export const actionPLanUpdates: actionPlansUpdatesType = [
   {
     id: 2,
     title: 'Plano de ação 2',
-    person: 'Bruno Barros',
+    person: 'Nome Aleatório',
     status: "realizado",
     time: '10:45 10/10/10'
   },
   {
     id: 3,
     title: 'Plano de ação 2',
-    person: 'Bruno Barros',
+    person: 'Sousa Barros',
     status: "realizado",
     time: '10:45 10/10/10'
   },
   {
     id: 4,
     title: 'Plano de ação 2',
-    person: 'Bruno Barros',
+    person: 'Bruno Sousa',
     status: "criado",
     time: '23:45 10/11/10'
   },

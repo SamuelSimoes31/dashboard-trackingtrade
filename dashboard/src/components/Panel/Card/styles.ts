@@ -1,17 +1,13 @@
 import styled from 'styled-components';
 
-interface ChildrenWrapperProps {
-  hasSearchBar: boolean;
-}
-
 export const CardHeader = styled.div`
-  /* border: 1px solid orange; */
+  height: 30px;
 `;
 
-export const ChildrenWrapper = styled.div<ChildrenWrapperProps>`
+export const ChildrenWrapper = styled.div`
   position: relative;
   
-  height: calc(100% - ${({hasSearchBar}) => hasSearchBar?84:30}px);
+  height: calc(100% - 30px);
   /* border: 1px solid cyan; */
 `;
 
@@ -69,19 +65,6 @@ export const Container = styled.div`
 
     color: ${({theme}) => theme.colors.text_primary};
     z-index: 10;
-  }
-
-  input[type="text"] {
-    width: 100%;
-    height: 34px;
-
-    padding: 0 10px;
-    margin: 10px 0;
-
-    background: #FAFAFA;
-    border: 1px solid #EBEBEB;
-    box-sizing: border-box;
-    border-radius: 100px;
   }
 
 `;

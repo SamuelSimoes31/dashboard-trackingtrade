@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Scroll = styled.div`
+  overflow: auto;
+  width: 100%;
+  height: calc(100% - 84px);
+`;
+
 export const Table = styled.table`
   color: ${({theme}) => theme.colors.text_primary};
   width: 100%;

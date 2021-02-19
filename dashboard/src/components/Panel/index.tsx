@@ -74,14 +74,13 @@ const Panel = () => {
           subtitle={"atualizações"}
           settings
           filter={['Pendente','Realizado']}
-          search
         >
           <StatusList 
             data={actionPLanUpdates}
             labelPerson={'responsável'}
           />
         </Card>
-        <Card title={"Inpeções Agendadas"} filter={['Diário','Mensal']} search>
+        <Card title={"Inpeções Agendadas"} filter={['Diário','Mensal']} >
           <TableList labels={inspecScheduled.labels} data={inspecScheduled.data}/>
         </Card>
       </GridPanel>
